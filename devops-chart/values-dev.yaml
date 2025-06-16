@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: shrirang451/amazon-prime
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+
+app:
+  name: amazon-prime-app
+  containerName: amazon-prime-container
